@@ -2,18 +2,20 @@
 
 ```mermaid
 graph TD
-    Client[Client Devices]
-    Browser[Web Browser]
-    API[REST API]
-    Server[Application Server]
-    DB[Database Server]
+    A[Node A]
+    B[Node B]
+    C[Node C]
+    D[Node D]
+    E[Node E]
 
-    Client --> Browser
-    Browser -->|HTTP Requests| API
-    API -->|Business Logic| Server
-    Server -->|CRUD Operations| DB
-    DB --> Server
-    Server --> API
-    API --> Browser
-    Browser --> Client
+    A --- B
+    A --- C
+    A --- D
+    A --- E
+    B --- C
+    B --- D
+    B --- E
+    C --- D
+    C --- E
+    D --- E
 ```
